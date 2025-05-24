@@ -16,8 +16,8 @@ This is a minimal Discord bot using `discord.js`. It simply connects to Discord 
 
 1. Clone or download this repo:
    ```bash
-   git clone <your-repo-url>
-   cd <your-folder>
+   git clone https://github.com/tiendnm/discord-presence-bot.git
+   cd discord-presence-bot
    ```
 
 2. Install dependencies:
@@ -42,12 +42,12 @@ This is a minimal Discord bot using `discord.js`. It simply connects to Discord 
 
 1. Build the image:
    ```bash
-   docker build -t simple-discord-bot .
+   docker build -t discord-presence-bot .
    ```
 
 2. Run the container:
    ```bash
-   docker run -d --name my-discord-bot --env-file .env simple-discord-bot
+   docker run -d --name my-discord-bot --env-file .env discord-presence-bot
    ```
 
 ---
