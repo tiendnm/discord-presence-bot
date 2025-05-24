@@ -33,7 +33,7 @@ This is a minimal Discord bot using `discord.js`. It simply connects to Discord 
 
 4. Start the bot:
    ```bash
-   node index.js
+   node app.js
    ```
 
 ---
@@ -82,7 +82,7 @@ This is a minimal Discord bot using `discord.js`. It simply connects to Discord 
 
 ```
 .
-├── index.js            # Main entry to start the bot
+├── app.js            # Main entry to start the bot
 ├── .env                # Your Discord bot token
 ├── Dockerfile          # For running via Docker
 ├── docker-compose.yml  # Docker Compose setup
