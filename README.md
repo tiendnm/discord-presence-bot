@@ -1,99 +1,68 @@
-# 🧠 Simple Discord Bot – Online Presence Only
+============================================================
+📦 Discord Presence Bot (Docker-ready)
+============================================================
 
-This is a minimal Discord bot using `discord.js`. It simply connects to Discord and shows as **online**, with no commands or message handling.
+A minimal Discord bot that simply connects and appears online.
+No commands or messages are handled. Just presence.
 
----
+------------------------------------------------------------
+🔧 Environment Variables
+------------------------------------------------------------
 
-## 📦 Requirements
+You need a `.env` file with this content:
 
-- Node.js 18 or higher
-- A Discord Developer account
-- Bot token
+DISCORD_TOKEN=your_discord_bot_token
 
----
+------------------------------------------------------------
+🐳 Run from Docker Hub
+------------------------------------------------------------
 
-## 🚀 Setup
+1. With inline token:
 
-1. Clone or download this repo:
-   ```bash
-   git clone https://github.com/tiendnm/discord-presence-bot.git
-   cd discord-presence-bot
-   ```
+   docker run -d --name discord-bot \
+     --env DISCORD_TOKEN=your_token_here \
+     tiendnm/discord-presence-bot
 
-2. Install dependencies:
-   ```bash
+2. Or using a .env file:
+
+   docker run -d --env-file .env tiendnm/discord-presence-bot
+
+------------------------------------------------------------
+🛠️ Development Setup (manual build)
+------------------------------------------------------------
+
+1. Install dependencies:
+
    npm install
-   ```
 
-3. Create a `.env` file and add your bot token:
+2. Run the bot:
 
-   ```
-   DISCORD_TOKEN=YOUR_DISCORD_BOT_TOKEN
-   ```
+   npm start
 
-4. Start the bot:
-   ```bash
-   node app.js
-   ```
-
----
-
-## 🐳 Run with Docker
+------------------------------------------------------------
+🏗️ Build & Run Your Own Docker Image
+------------------------------------------------------------
 
 1. Build the image:
-   ```bash
-   docker build -t discord-presence-bot .
-   ```
 
-2. Run the container:
-   ```bash
-   docker run -d --name my-discord-bot --env-file .env discord-presence-bot
-   ```
+   docker build -t tiendnm/discord-presence-bot .
 
----
+2. Run it:
 
-## 🐙 Run with Docker Compose
+   docker run -d --env-file .env tiendnm/discord-presence-bot
 
-1. Build and run:
-   ```bash
-   docker-compose up -d --build
-   ```
+------------------------------------------------------------
+📁 Project Structure
+------------------------------------------------------------
 
-2. View logs:
-   ```bash
-   docker-compose logs -f
-   ```
+- app.js            # Entry point for the bot
+- .env.example        # Example env file
+- Dockerfile          # Docker build instructions
+- .dockerignore       # Ignore node_modules & secrets
+- package.json        # Project metadata and deps
 
-3. Stop the bot:
-   ```bash
-   docker-compose down
-   ```
+------------------------------------------------------------
+👨‍💻 Author
+------------------------------------------------------------
 
----
-
-## 🧠 Notes
-
-- This bot connects to the Discord Gateway and shows online status.
-- You can extend it later to handle slash commands, messages, interactions, etc.
-
----
-
-## 📁 Project Structure
-
-```
-.
-├── app.js            # Main entry to start the bot
-├── .env                # Your Discord bot token
-├── Dockerfile          # For running via Docker
-├── docker-compose.yml  # Docker Compose setup
-├── .dockerignore       # Ignore node_modules, .env when building
-├── package.json        # Project metadata and dependencies
-```
-
----
-
-## 👨‍💻 Author
-
-tiendnm – making a lightweight bot that simply goes online and is easy to deploy.
-
----
+tiendnm
