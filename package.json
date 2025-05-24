@@ -1,0 +1,24 @@
+{
+  "name": "discord-presence-bot",
+  "private": true,
+  "version": "1.0.0",
+  "description": "This is a minimal Discord bot using `discord.js`. It simply connects to Discord and shows as **online**, with no commands or message handling.",
+  "main": "app.js",
+  "type": "module",
+  "engines": {
+    "node": ">=18.x"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "tiendnm",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.19.3",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  }
+}

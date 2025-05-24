@@ -1,0 +1,6 @@
+services:
+  discord-bot-online:
+    build: .
+    container_name: discord-bot-online
+    env_file: .env
+    restart: unless-stopped
