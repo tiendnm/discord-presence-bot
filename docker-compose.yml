@@ -1,6 +1,7 @@
 services:
-  discord-bot-online:
-    build: .
-    container_name: discord-bot-online
-    env_file: .env
+  discord-presence-bot:
+    image: tiendnm/discord-presence-bot
+    container_name: discord-presence-bot
     restart: unless-stopped
+    env_file:
+      - .env
